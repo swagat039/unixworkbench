@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Guess the number of files in the current directory:"
-
 function guessfiles(){
     true_guess=$(ls -l |grep "^-"|wc -l)
     while true;
@@ -20,4 +18,6 @@ function guessfiles(){
         fi
     done
 }
+
+echo "Guess the number of files in the current directory:"
 guessfiles
